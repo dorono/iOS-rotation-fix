@@ -38,8 +38,6 @@
     $(window).on("orientationchange",function(){
         if($(window).width() > iosDevice.landscapeThreshold) {
             freezeScaling();
-        } else {
-            reenableScaling();
         }
         window.scrollTo(0, 0);
     });
