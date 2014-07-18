@@ -33,13 +33,12 @@
         freezeScaling();
     }
     
-    // freeze scaling when the user flips to landscape, and then
-    // unfreeze it when the go to portrait
+    // freeze scaling when the user flips to landscape
     $(window).on("orientationchange",function(){
-        if($(window).width() > iosDevice.landscapeThreshold) {
-            freezeScaling();
-        }
-        window.scrollTo(0, 0);
+    if($(window).width() > iosDevice.landscapeThreshold) {
+        freezeScaling();
+    }
+    window.scrollTo(0, 0);
     });
     
     // Re-enable scaling as soon as the user attempts to zoom
